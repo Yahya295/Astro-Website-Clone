@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+const posts = [
+  { icon: '✍️', category: 'Brand strategy', title: 'Your brand is more than a logo. Here’s where to start.', date: 'May 18, 2025' },
+  { icon: '🌱', category: 'Small business', title: 'A calmer way to plan your next marketing campaign.', date: 'May 06, 2025' },
+  { icon: '💬', category: 'Customer experience', title: 'The little details that make people feel understood.', date: 'April 22, 2025' },
+  { icon: '📈', category: 'Growth', title: 'Make your marketing goals feel a little more human.', date: 'April 10, 2025' },
+  { icon: '🎨', category: 'Creative', title: 'Finding the voice that sounds like your business.', date: 'March 28, 2025' },
+  { icon: '🤝', category: 'Community', title: 'Build a community by showing up with care.', date: 'March 12, 2025' },
+];
+---
+<Layout title="The Journal — Viso Studio" active="Blog">
+  <section class="page-hero"><span class="eyebrow">The Viso journal</span><h1>A few good thoughts.</h1><p>Fresh ideas, practical advice, and inspiration for building a brand people want to be part of.</p></section>
+  <section class="section"><div class="section-inner"><div class="cards article-grid">{posts.map((post) => <article class="card"><div class="article-art">{post.icon}</div><div class="article-body"><small>{post.category} · {post.date}</small><h3>{post.title}</h3><a href="/contact" style="font-size:12px;font-weight:700;color:var(--coral)">Read the story →</a></div></article>)}</div></div></section>
+</Layout>
